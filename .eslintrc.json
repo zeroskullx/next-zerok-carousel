@@ -1,3 +1,24 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "no-vars": "off",
+    "no-var": "off",
+    "prefer-const": "off",
+    "react/jsx-no-target-blank": "warn",
+    "@next/next/no-sync-scripts": "warn",
+    "no-unused-vars": "warn"
+  },
+  "ignorePatterns": ["**/__mocks__/*.ts", "*.lock", "*.html"]
 }
